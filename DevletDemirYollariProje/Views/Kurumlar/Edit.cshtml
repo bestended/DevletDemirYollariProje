@@ -1,0 +1,58 @@
+﻿@model DevletDemirYollariProje.Models.Kurumlar
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div style="margin-left:500px;">
+    <h1 style="color:aqua">Kurum Güncelleme</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="KurumId" />
+                <div class="form-group">
+                    <label asp-for="KurumAdi" class="control-label"></label>
+                    <input asp-for="KurumAdi" class="form-control" />
+                    <span asp-validation-for="KurumAdi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="KurulusTarihi" class="control-label"></label>
+                    <input asp-for="KurulusTarihi" class="form-control" />
+                    <span asp-validation-for="KurulusTarihi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="KurumMerkezi" class="control-label"></label>
+                    <input asp-for="KurumMerkezi" class="form-control" />
+                    <span asp-validation-for="KurumMerkezi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CalisanSayisi" class="control-label"></label>
+                    <input asp-for="CalisanSayisi" class="form-control" />
+                    <span asp-validation-for="CalisanSayisi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PersonelId" class="control-label"></label>
+                    <input asp-for="PersonelId" class="form-control" />
+                    <span asp-validation-for="PersonelId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PeronId" class="control-label"></label>
+                    <input asp-for="PeronId" class="form-control" />
+                    <span asp-validation-for="PeronId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Güncelle" class="btn btn-success" style="margin-top:10px;" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+
+</div>

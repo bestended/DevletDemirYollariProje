@@ -1,0 +1,63 @@
+﻿@model DevletDemirYollariProje.Models.Trenler
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div style="margin-left:500px;">
+    <h1 style="color:aqua">Tren Silme</h1>
+    <div>
+        <h4>Trenler</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TrenTipi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TrenTipi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.KalkisTarihSaat)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.KalkisTarihSaat)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.VarisTarihSaat)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.VarisTarihSaat)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.VagonSayisi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.VagonSayisi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.KalkisYön)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.KalkisYön)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.VarisYön)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.VarisYön)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Kurum)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Kurum.KurumId)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="TrenId" />
+            <input type="submit" value="Sil" class="btn btn-warning" style="margin-top:10px;" />
+            <a asp-action="Index">Geri dön</a>
+        </form>
+    </div>
+</div>

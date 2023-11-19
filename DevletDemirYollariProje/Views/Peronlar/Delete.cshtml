@@ -1,0 +1,51 @@
+﻿@model DevletDemirYollariProje.Models.Peronlar
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div style="margin-left:500px;">
+    <h1 style="color:aqua">Peron Silme</h1>
+    <div>
+        <h4>Peronlar</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PeronNumarasi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PeronNumarasi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PeronSayisi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PeronSayisi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PeronMevki)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PeronMevki)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PeronUzunluk)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PeronUzunluk)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DurakSayisi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DurakSayisi)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="PeronId" />
+            <input type="submit" value="Sil" class="btn btn-warning" style="margin-top:10px;" />
+            <a asp-action="Index">Geri dön</a>
+        </form>
+    </div>
+</div>

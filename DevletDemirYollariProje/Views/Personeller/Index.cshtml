@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DevletDemirYollariProje.Models.Personeller>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="color:aqua">Personel Listesi</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary" style="margin-left:20px; width:150px;">Personel Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Adi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adresi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresi)
+            </td>
+         
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.PersonelId" class="btn btn-warning">Güncelle</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PersonelId" class="btn btn-success">Sil</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

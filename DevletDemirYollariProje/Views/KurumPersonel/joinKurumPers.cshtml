@@ -1,0 +1,72 @@
+﻿@model IEnumerable<DevletDemirYollariProje.Models.OrtakTablolar.KurumPersonel>
+@{
+    ViewData["Title"] = "joinKurumPers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Kurum-Personel Listesi</h1>
+
+
+
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>
+                Kurum Adı
+
+            </th>
+            <th>
+
+                Kuruluş Tarihi
+            </th>
+            <th>
+                Kurum Merkezi
+
+            </th>
+            <th>
+                Çalışan Sayısı
+
+            </th>
+            <th>
+                Personel  Adı
+
+            </th>
+            <th>
+
+                Personel Soyadı
+            </th>
+
+           
+            <th>
+                Personel Yaşı
+            </th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+      
+        @foreach (var item in Model)
+        {
+
+            <tr>
+            <td>@item.KurumAdi</td>
+            <td>@item.KurulusTarihi</td>
+            <td>@item.KurumMerkezi</td>
+            <td>@item.CalisanSayisi</td>
+          
+            <td>@item.Adi</td>
+            <td>@item.Soyadi</td>
+            <td>@item.Yas</td>
+
+
+
+            </tr>
+        }
+
+
+    </tbody>
+
+</table>

@@ -1,0 +1,54 @@
+﻿@model DevletDemirYollariProje.Models.Kurumlar
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="margin-left:500px;">
+    <h1 style="color:aqua">Kurum Ekleme</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="KurumAdi" class="control-label"></label>
+                    <input asp-for="KurumAdi" class="form-control" />
+                    <span asp-validation-for="KurumAdi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="KurulusTarihi" class="control-label"></label>
+                    <input asp-for="KurulusTarihi" class="form-control" />
+                    <span asp-validation-for="KurulusTarihi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="KurumMerkezi" class="control-label"></label>
+                    <input asp-for="KurumMerkezi" class="form-control" />
+                    <span asp-validation-for="KurumMerkezi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CalisanSayisi" class="control-label"></label>
+                    <input asp-for="CalisanSayisi" class="form-control" />
+                    <span asp-validation-for="CalisanSayisi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PersonelId" class="control-label"></label>
+                    <select asp-for="PersonelId" class="form-control" asp-items="ViewBag.PersonelId"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PeronId" class="control-label"></label>
+                    <select asp-for="PeronId" class="form-control" asp-items="ViewBag.PeronId"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Ekle" class="btn btn-primary" style="margin-top:10px;" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Geri dön</a>
+    </div>
+
+</div>

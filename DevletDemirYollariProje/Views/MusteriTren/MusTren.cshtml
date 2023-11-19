@@ -1,0 +1,55 @@
+﻿@model DevletDemirYollariProje.Models.OrtakTablolar.MusteriTren
+@{
+    ViewData["Title"] = "MusTren";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Müşteri-Tren Listesi</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>TC Kimlik No</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Cinsiyet</th>
+            <th>Telefon</th>
+
+            <th>Tren Kalkış Tarih/Saat</th>
+            <th>Kalkış Yönü</th>
+            <th>Varış Yönü</th>
+
+
+
+        </tr>
+
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Musteri)
+        {
+
+            <tr>
+                <td> @item.TcKimlikNo  </td>
+                <td>  @item.Ad </td>
+                <td>  @item.Soyad </td>
+                <td>  @item.Cinsiyet </td>
+                <td>  @item.Telefon </td>
+
+                <td>  @item.Tren.KalkisTarihSaat </td>
+                <td>  @item.Tren.KalkisYön </td>
+                <td>  @item.Tren.VarisYön </td>
+
+            </tr>
+
+
+
+
+        }
+
+
+    </tbody>
+</table>
+

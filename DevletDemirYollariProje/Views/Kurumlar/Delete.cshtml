@@ -1,0 +1,57 @@
+﻿@model DevletDemirYollariProje.Models.Kurumlar
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div style="margin-left:500px;">
+    <h1 style="color:aqua">Kurum Silme</h1>
+    <div>
+        <h4>Kurumlar</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.KurumAdi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.KurumAdi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.KurulusTarihi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.KurulusTarihi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.KurumMerkezi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.KurumMerkezi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CalisanSayisi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CalisanSayisi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Peron)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Peron.PeronId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Personel)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Personel.PersonelId)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="KurumId" />
+            <input type="submit" value="Sil" class="btn btn-warning" style="margin-top:10px;" />
+            <a asp-action="Index">Geri dön</a>
+        </form>
+    </div>
+</div>

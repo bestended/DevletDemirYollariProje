@@ -1,0 +1,72 @@
+﻿@model IEnumerable<DevletDemirYollariProje.Models.Trenler>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="color:aqua">Tren Listesi</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary" style="margin-left:20px; width:150px;">Tren Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TrenTipi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KalkisTarihSaat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VarisTarihSaat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VagonSayisi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KalkisYön)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VarisYön)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KurumId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrenTipi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KalkisTarihSaat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VarisTarihSaat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VagonSayisi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KalkisYön)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VarisYön)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KurumId)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TrenId" class="btn btn-warning">Güncelle</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TrenId" class="btn btn-success">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

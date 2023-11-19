@@ -1,0 +1,61 @@
+﻿@model DevletDemirYollariProje.Models.Musteriler
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div style="margin-left:500px;">
+    <h1 style="color:aqua">Müşteri Güncelleme</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="MusteriId" />
+                <div class="form-group">
+                    <label asp-for="TcKimlikNo" class="control-label"></label>
+                    <input asp-for="TcKimlikNo" class="form-control" />
+                    <span asp-validation-for="TcKimlikNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Ad" class="control-label"></label>
+                    <input asp-for="Ad" class="form-control" />
+                    <span asp-validation-for="Ad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Soyad" class="control-label"></label>
+                    <input asp-for="Soyad" class="form-control" />
+                    <span asp-validation-for="Soyad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cinsiyet" class="control-label"></label>
+                    <input asp-for="Cinsiyet" class="form-control" />
+                    <span asp-validation-for="Cinsiyet" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Telefon" class="control-label"></label>
+                    <input asp-for="Telefon" class="form-control" />
+                    <span asp-validation-for="Telefon" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mail" class="control-label"></label>
+                    <input asp-for="Mail" class="form-control" />
+                    <span asp-validation-for="Mail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TrenId" class="control-label"></label>
+                    <input asp-for="TrenId" class="form-control" />
+                    <span asp-validation-for="TrenId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Güncelle" class="btn btn-success" style="margin-top:10px;" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

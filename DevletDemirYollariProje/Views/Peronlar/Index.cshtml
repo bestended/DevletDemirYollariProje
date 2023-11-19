@@ -1,0 +1,60 @@
+﻿@model IEnumerable<DevletDemirYollariProje.Models.Peronlar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="color:aqua">Peron Listesi</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary" style="margin-left:20px; width:150px;">Peron Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PeronNumarasi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PeronSayisi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PeronMevki)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PeronUzunluk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DurakSayisi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PeronNumarasi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PeronSayisi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PeronMevki)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PeronUzunluk)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DurakSayisi)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.PeronId" class="btn btn-warning">Güncelle</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PeronId" class="btn btn-success">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
